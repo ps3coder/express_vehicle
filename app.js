@@ -1,10 +1,11 @@
 import express from "express";
-import bodyParser from "body-parser";
+import cors from "cors";
+import mongoose from "mongoose";
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(cors());
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port http://localhost:${port}/`);
+app.listen(3000, () => {
+  console.log(`Server is running on port http://localhost:${3000}/ `);
 });
